@@ -1,0 +1,101 @@
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body should allow scrolling */
+body {
+  height: 100%;
+  overflow-y: scroll; /* Allow page scrolling with a vertical scrollbar */
+}
+
+/* Ensure the carousel is the full width */
+.carousel-container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Styling the arrows */
+.slick-prev,
+.slick-next {
+  background: rgba(255, 255, 255, 0.6); /* Light background for arrows */
+  width: 30px ;
+  height: 30px ; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Adjust arrow position */
+.slick-prev {
+  left: 10px;
+  z-index: 1;
+}
+
+.slick-next {
+  right: 10px;
+  z-index: 1;
+}
+
+
+.slick-prev::before,
+.slick-next::before {
+  display: none;
+}
+
+/* the arrow icon size */
+.slick-prev svg,
+.slick-next svg {
+  font-size: 12px ;
+  color: white;
+}
+
+
+.slick-slide img {
+  width: 100%;
+  object-fit: cover;
+  height: 70vh; /* Adjust this for a smaller carousel height */
+}
+
+
+.slick-dots {
+  position: absolute;
+  bottom: 15px; /* Adjust positioning for dots */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 10; /* Ensure the dots are above the carousel */
+}
+
+.slick-dots li {
+  margin: 0 4px;
+}
+
+
+.slick-dots li button {
+  width: 6px ;
+  height: 6px ;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.slick-dots li.slick-active button {
+  opacity: 1;
+}
+
+/* Remove default dot styling */
+.slick-dots li button:before {
+  content: none;
+}

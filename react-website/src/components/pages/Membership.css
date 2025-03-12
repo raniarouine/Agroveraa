@@ -1,0 +1,103 @@
+.membership-page {
+  background-color: lightgrey;
+}
+
+.membership-container {
+  background-color: #4B5943; /* Update to new color */
+  width: 80%; /* Make it more responsive on smaller screens */
+  max-width: 1200px;
+  margin: 60px auto; /* Center the container */
+  padding: 40px; /* Add padding inside the container */
+  border-radius: 15px;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.membership-title {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #B7CE66; /* Update title color */
+}
+
+.carousel-membership-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.carousel .slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.carousel h2 {
+  color: #C8D6A2; /* Light green for titles */
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.carousel p {
+  color: #DCDFDA; /* Light grey text */
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Adjust spacing between membership and counter containers */
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px auto 60px; /* Add margin-top to create space */
+  width: 80%;
+}
+
+.counter-item {
+  text-align: center;
+  color: #4B5943; /* Darker green for counter titles */
+}
+
+.counter-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.counter-item span {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: orange; /* Orange color for the counters */
+}
+
+.counter-item svg {
+  color: orange; /* Match icon color with counter color */
+  margin-bottom: 10px; /* Space between icon and title */
+  font-size: 1.7rem;
+}
+
+/* Add responsive design adjustments */
+@media (max-width: 768px) {
+  .membership-container {
+    width: 90%;
+    padding: 20px; /* Adjust padding for mobile */
+  }
+
+  .carousel h2, .carousel p {
+    font-size: 1rem; /* Smaller text for mobile */
+  }
+
+  .counter-container {
+    flex-direction: column; /* Stack counter items vertically on small screens */
+    align-items: center;
+    width: 100%;
+  }
+
+  .counter-item {
+    margin-bottom: 20px; /* Space between counter items */
+  }
+}

@@ -1,0 +1,103 @@
+/* General styling for the section */
+.body-section {
+  background-color: #f4f4f4; /* Light gray background */
+  padding: 50px 0;
+}
+
+/* Center the content and limit max width */
+.body-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Spacing between image and text */
+}
+
+/* Left side: Image */
+.image-container {
+  flex: 1;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Right side: Text content */
+.text-container {
+  flex: 1;
+  color: #333; /* Dark gray text */
+}
+
+/* Titles */
+.text-container h2 {
+  font-size: 24px;
+  margin-bottom: 5px; /* Reduced space below the title */
+}
+
+.text-container h3 {
+  font-size: 18px;
+  margin-top: 15px; /* Increased space above h3 for better separation */
+  margin-bottom: 10px; /* Space below the h3 */
+  text-align: left; /* Align to the left by default */
+}
+
+/* Justify text */
+.text-container p,
+.mission p,
+.vision p {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+  margin-top: 0; /* Removed extra margin on top of p elements */
+  margin-bottom: 15px; /* Increased space below paragraphs */
+  font-size : 16px;
+}
+
+/* Mission & Vision section */
+.mission-vision {
+  display: flex;
+  gap: 80px;
+  margin-top: 15px;
+}
+
+.mission,
+.vision {
+  flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .body-content {
+    flex-direction: column;
+    text-align: left; /* Align text left for mobile */
+    padding: 0 20px; /* Added padding on left and right for both image and text */
+  }
+
+  .mission-vision {
+    flex-direction: column;
+    gap: 20px; /* Add a little space between mission and vision */
+  }
+
+  /* Adjust text alignment for small screens */
+  .text-container p,
+  .mission p,
+  .vision p {
+    text-align: justify; /* Ensure the paragraph text is justified */
+  }
+
+  /* Align the h3 and p elements to the left, with padding */
+  .text-container h3, 
+  .text-container p {
+    margin-left: 20px; /* Added space from the left edge of the screen */
+    margin-right: 20px; /* Added space from the right edge of the screen */
+    display: inline-block;
+  }
+
+  /* Add some padding around the container */
+  .text-container {
+    padding: 0 20px; /* Added left and right padding */
+  }
+}

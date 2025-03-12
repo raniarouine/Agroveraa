@@ -1,0 +1,86 @@
+.member-list {
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px; /* Espacement entre le texte de bienvenue et la liste */
+  font-size: 0px;
+}
+
+.member-list .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.member-list h2 {
+  color: #222;
+  font-size: 16px;
+}
+
+.add-btn {
+  background-color: #528f31;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom :10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background: #f0f0f0;
+}
+
+.edit-btn, .delete-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: #d9534f;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Ajustements pour les écrans mobiles */
+@media (max-width: 768px) {
+  .member-list {
+    padding: 15px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+
+  .edit-btn, .delete-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}

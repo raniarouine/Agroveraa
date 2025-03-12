@@ -1,0 +1,92 @@
+/* Styles pour la popup de MemberForm */
+.member-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Fond sombre */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* S'assurer que la popup soit en haut */
+}
+
+.member-form-container {
+  background-color: #fff;
+  width: 350px; /* Augmentation de la largeur */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Réduction de la hauteur du popup */
+.member-form-container h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* Champs de saisie */
+.member-form-input-with-icon {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px; /* Réduction de l'espace entre les champs */
+}
+
+.member-form-input-with-icon label {
+  font-size: 0.85rem;
+  margin-bottom: 3px;
+  display: block;
+}
+
+.member-form-input-with-icon input,
+.member-form-input-with-icon select {
+  width: 100%;
+  padding: 8px; /* Réduction du padding */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.member-form-input-with-icon input:focus,
+.member-form-input-with-icon select:focus {
+  border-color: #528f31;
+  outline: none;
+  box-shadow: 0 0 5px rgba(82, 143, 49, 0.3);
+}
+
+/* Bouton de soumission */
+button[type="submit"].member-form-submit {
+  background-color: #528f31;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+button[type="submit"].member-form-submit:hover {
+  background-color: #3a6f2c;
+}
+
+/* Ajustements pour les écrans mobiles */
+@media (max-width: 768px) {
+  .member-form-container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .member-form-input-with-icon input,
+  .member-form-input-with-icon select {
+    font-size: 12px;
+  }
+
+  button[type="submit"].member-form-submit {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,80 @@
+/* Style spécifique pour le formulaire d'adhésion */
+.form-container {
+  background-color: #f9f9f9;
+  padding: 3rem;
+  max-width: 800px;
+  margin: 100px auto; /* Espace ajouté en haut et en bas */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  font-size: 1.7rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-container label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-container input:focus,
+.form-container select:focus{
+  border-color: #528f31;
+  outline: none;
+}
+
+
+.form-container button {
+  background-color: #528f31;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-container button:hover {
+  background-color: #3a6f2c;
+}
+
+.form-container .error {
+  color: #d9534f;
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+  .form-container {
+    padding: 2rem;
+    margin: 50px auto; /* Adjust vertical space */
+    width: 90%; /* Allow more space on the sides */
+    box-sizing: border-box;
+  }
+
+  .form-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-container button {
+    font-size: 1rem;
+  }
+}

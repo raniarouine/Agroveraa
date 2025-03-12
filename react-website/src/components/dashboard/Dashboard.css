@@ -1,0 +1,165 @@
+/* Styles généraux */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e1ddddbd;
+  color: #333;
+}
+
+/* Barre latérale */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: white;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  cursor: default;
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+.sidebar-logo img {
+  width: 90px;
+  height: auto;
+  margin-left: -10px;
+}
+
+.separator {
+  border-top: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  color: black;
+  font-size: 16px;
+}
+
+.sidebar ul li svg {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.sidebar ul li.dashboard:hover,
+.sidebar ul li.paiement:hover {
+  background-color: rgba(0, 123, 255, 0.2);
+  color: #007bff;
+}
+
+.sidebar ul li.dashboard:hover svg,
+.sidebar ul li.paiement:hover {
+  color: #007bff;
+}
+
+.sidebar ul li.logout {
+  color: red;
+  margin-top: auto;
+}
+
+.sidebar ul li.logout:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+/* Contenu principal */
+.main-content {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+.content h1 {
+  margin-top: 30px;
+  margin-bottom : 30px;
+  font-size : 18px;
+}
+
+/* Barre supérieure */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.date-display {
+  cursor: pointer;
+  font-size: 16px;
+  color: inherit;
+  margin-left: 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.user-icon {
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+
+.date-display:hover {
+  color: #007bff;
+}
+
+.calendar-popup {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  z-index: 9999;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px;
+    padding: 10px;
+  }
+
+  .main-content {
+    margin-left: 180px;
+  }
+
+  .topbar {
+    padding: 8px 15px;
+  }
+
+  .date-display {
+    font-size: 14px;
+  }
+
+  .calendar-popup {
+    width: 300px;
+    margin-left: -10px;
+  }
+}

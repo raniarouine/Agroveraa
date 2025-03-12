@@ -1,0 +1,191 @@
+.about-container {
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-container h1,
+.about-container h3 {
+  text-align: left;
+}
+
+.about-container h1 {
+  margin-bottom: 18px; /* space below the title */
+}
+
+.about-container p {
+  margin-bottom: 20px; /* space below the paragraphs */
+  font-size : 16px;
+  word-spacing : 3px;
+}
+
+.activities-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 30px; /* Space between the activity boxes */
+}
+
+.activity-box {
+  text-align: center;
+  width: 22%; /* Reduce the width to make the boxes a bit smaller */
+  min-height: 180px; /* boxes height */
+  background-color: rgba(255, 165, 0, 0.6); /* Transparent orange color */
+  padding: 15px; /* Reduced padding */
+  border-radius: 8px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* shadow opacity */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px; /* Add space between boxes and the next element */
+  
+  display: flex; /* Make the content center */
+  flex-direction: column; /* Stack the content vertically */
+  justify-content: center; /* Vertically center the content */
+  align-items: center; /* Horizontally center the content */
+}
+
+.activity-box:hover {
+  transform: scale(1.05); /* Enlarge the box on hover */
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
+}
+
+.activity-box i {
+  font-size: 2.5rem; /* Icon size */
+  color: #fff; /* White icon color */
+  margin-bottom: 10px; /*space between icon and title */
+}
+
+.activity-box h6 {
+  font-size: 1rem; /* title font size */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px; /* space between title and description */
+}
+
+.activity-box p {
+  font-size: 0.9rem; 
+  color: #555;
+  text-align: center; /* Center align the description */
+  margin-top: 5px; 
+  line-height: 1.4; 
+  font-size : 14px;
+  word-spacing : 2px;
+}
+
+/* Adjust the spacing for the final paragraph */
+.about-container p:last-of-type {
+  margin-top: 30px; /* Add space between the last paragraph and the activity boxes */
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .activities-container {
+    flex-direction: column; /* Stack activity boxes vertically */
+    align-items: center;
+  }
+
+  .activity-box {
+    width: 80%; /* Make boxes take more space on smaller screens */
+    min-height: auto; /* Adjust height for smaller screens */
+  }
+}
+
+
+/* Historique Section */
+.historique {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.historique h2 {
+  font-size: 25px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.historique-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between items */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.historique-item {
+  flex: 1;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.historique-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+
+.historique-item p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .historique-container {
+    flex-direction: column; /* Stack the items vertically */
+    align-items: center;
+  }
+
+  .historique-item {
+    width: 80%; /* Make items take more space */
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/* Nos Partenaires Section */
+.partners-container {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.partners-container h3 {
+  font-size: 26px; /* Same size as Historique section h2 */
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.partners-container .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners-container img {
+  max-width: 500px;
+  height: auto;
+  margin: 0 10px;
+  display: block;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .partners-container {
+    padding: 40px 0;
+  }
+
+  .partners-container h3 {
+    font-size: 25px; /* Reduce font size on smaller screens */
+  }
+
+  .partners-container img {
+    max-width: 300px; /* Slightly smaller image on mobile, but still visible */
+  }
+}
+
+
+

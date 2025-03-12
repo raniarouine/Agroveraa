@@ -1,0 +1,47 @@
+.home,
+.about,
+.membership,
+.contact,
+.intranet {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+
+
+.about {
+  background-image: url('/images/img31.avif');
+  background-position: center;
+  background-size: cover;
+  color: #e7dddd;
+  font-style: italic;
+}
+
+.membership {
+  background-image: url('/images/img36.jpg');
+  background-position: center;
+  background-size: cover;
+  color: #e7dddd;
+  font-style: italic;
+}
+
+.contact {
+  background-image: url('/images/img9.jpg');
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  font-size: 100px;
+}
+
+.intranet {
+  background-image: url('/images/img10.jpg');
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  font-size: 100px;
+}
+
+

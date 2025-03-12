@@ -1,0 +1,138 @@
+/* General Styles for Production Component */
+.production-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Styling for Intro Section */
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 17px;
+  color: #53595a;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Styling for Section Titles (Nos Produits, Nos Parcelles, etc.) */
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.products-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: #8C9C7C;
+  margin-bottom: 20px;
+}
+
+.location-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: #8C9C7C;
+  margin-bottom: 20px;
+}
+
+/* Product Categories Styles */
+.product-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.category {
+  width: 28%;
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #E8EACC;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.category h3 {
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.category:hover {
+  transform: translateY(-10px);
+}
+
+/* Product List Styles (Hidden by Default) */
+.products-list {
+  display: none;
+  font-size: 10px;
+  color: #7f8c8d;
+}
+
+.products-list p {
+  text-align: center;
+  font-weight: normal;
+}
+
+.category:hover .products-list {
+  display: block;
+}
+
+/* Map Section Styles */
+#map {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .product-categories {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category {
+    width: 80%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-title {
+    font-size: 20px;
+  }
+
+  .products-title, .location-title {
+    font-size: 24px;
+  }
+
+  .category h3 {
+    font-size: 18px;
+  }
+}

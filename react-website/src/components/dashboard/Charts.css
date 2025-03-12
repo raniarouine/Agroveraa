@@ -1,0 +1,37 @@
+.charts-wrapper {
+  display: flex;
+  justify-content: center; /* Centrer les graphiques */
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 20px; /* Espacement entre les graphiques */
+  padding: 0 20px; /* Ajouter un espace à gauche et à droite */
+}
+
+.chart-container {
+  background-color: #f8f8f8;
+  padding: 15px; /* Padding ajusté */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 40%; /* Largeur ajustée */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 16px; /* Taille de police réduite */
+  margin-bottom: 10px; /* Marge réduite */
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .charts-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espacement vertical réduit sur les petits écrans */
+    padding: 0 10px; /* Espacement réduit sur les petits écrans */
+  }
+
+  .chart-container {
+    width: 100%;
+  }
+}
