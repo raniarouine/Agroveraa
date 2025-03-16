@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  database:
+    image: postgres:latest
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app-react:
+    image: app-react
+    container_name: react_app
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - database
+
+volumes:
+  postgres_data:
