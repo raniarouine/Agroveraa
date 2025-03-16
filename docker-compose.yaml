@@ -14,14 +14,37 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+
+  app-django:
+    build:
+      context: ./Core  # Remplace "backend" par "Core"
+      dockerfile: Dockerfile
+    container_name: django_app
+    restart: always
+    environment:
+      - DEBUG=1
+      - DATABASE_NAME=mydatabase
+      - DATABASE_USER=user
+      - DATABASE_PASSWORD=password
+      - DATABASE_HOST=database
+      - DATABASE_PORT=5432
+    ports:
+      - "8000:8000"
+    depends_on:
+      - database
+
   app-react:
-    image: app-react
+    build:
+      context: ./react-website  # Construire à partir de "react-website"
+      dockerfile: Dockerfile
     container_name: react_app
     restart: always
     ports:
       - "3000:3000"
     depends_on:
-      - database
+      - app-django
+
 
 volumes:
   postgres_data:
+
